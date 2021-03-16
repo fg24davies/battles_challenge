@@ -150,3 +150,39 @@ Tuesday - jack and emma pairing
 - [x] Modify some of the attributes of the inputs (e.g. the `name` attribute) and explain to your pair partner how this affects the query string in the URL bar when you submit the form
 - [x] Print the incoming `params` to the server logs each time you visit the route
 - [x] Explain to your pair partner how modifying input attributes (e.g. `name`) affects the incoming `params` hash
+
+
+# 14. Posted Forms
+To complete this challenge, you will need to:
+- [x] Write a new get route that renders only the cat-naming form
+        - new route in app.rb
+- [x] Add a method attribute to your form element, with the value "post"
+- [x] Change your /named-cat route to use post instead of get
+- [x] Interact with your application
+- [x] Observe the URL query string when you submit the form
+- [x] Observe the printed params when you submit the form
+- [x] Explain your observations to your pair partner.
+
+# 15. Chrome DevTools
+
+- [x] Open the Chrome DevTools within your browser
+- [x] Switch to the Network pane of the DevTools
+- [x] Interact with your application, explaining to your pair partner what is happening in the DevTools when you do so
+- [x] Locate the method for each request
+- [x] Locate the form data for `POST` requests
+
+# 16. Capybara
+
+To complete this challenge, you will need to:
+ Make sure you have installed Firefox browser on your machine (you can use brew cask install firefox if you haven't).
+ List capybara and selenium-webdriver in a Gemfile.
+ make sure bundle install works - you may need to manually install Xcode if you haven't already.
+ install Firefox GeckoDriver, brew install geckodriver. If Firefox does not work for you after installing GeckoDriver, it is also possible to use gem 'chromedriver-helper'.
+ Open up PRY and require both capybara/dsl and selenium-webdriver.
+ Within the REPL, $ include Capybara::DSL.
+ Set Capybara's default driver to be selenium.
+ Use Capybara's visit command to take the automated browser to http://capybaraworkout.herokuapp.com/, and use the click_link command to click 'Start Workout!'
+ Refer to a Capybara cheat sheet and complete the Capybara workout.
+ Explain to your pair partner what jobs capybara and selenium-webdriver do.
+
+
