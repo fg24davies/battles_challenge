@@ -173,16 +173,39 @@ To complete this challenge, you will need to:
 
 # 16. Capybara
 
-To complete this challenge, you will need to:
- Make sure you have installed Firefox browser on your machine (you can use brew cask install firefox if you haven't).
- List capybara and selenium-webdriver in a Gemfile.
- make sure bundle install works - you may need to manually install Xcode if you haven't already.
- install Firefox GeckoDriver, brew install geckodriver. If Firefox does not work for you after installing GeckoDriver, it is also possible to use gem 'chromedriver-helper'.
- Open up PRY and require both capybara/dsl and selenium-webdriver.
- Within the REPL, $ include Capybara::DSL.
- Set Capybara's default driver to be selenium.
- Use Capybara's visit command to take the automated browser to http://capybaraworkout.herokuapp.com/, and use the click_link command to click 'Start Workout!'
- Refer to a Capybara cheat sheet and complete the Capybara workout.
- Explain to your pair partner what jobs capybara and selenium-webdriver do.
+- [ ] Make sure you have installed Firefox browser on your machine (you can use `brew cask install firefox` if you haven't).
+- [ ] List `capybara` and `selenium-webdriver` in a Gemfile.
+- [ ] make sure bundle install works - you may need to manually install Xcode if you haven't already.
+- [ ] install Firefox GeckoDriver, `brew install geckodriver`. If Firefox does not work for you after installing GeckoDriver, it is also possible to use [gem 'chromedriver-helper'](https://github.com/flavorjones/chromedriver-helper).
+- [ ] Open up *PRY* and require both `capybara/dsl` and `selenium-webdriver`.
+- [ ] Within the REPL, `$ include Capybara::DSL`.
+- [ ] [Set Capybara's default driver](https://github.com/jnicklas/capybara#selecting-the-driver) to be selenium.
+- [ ] Use Capybara's `visit` command to take the automated browser to [http://capybaraworkout.herokuapp.com/](http://capybaraworkout.herokuapp.com/), and use the `click_link` command to click 'Start Workout!'
+- [ ] Refer to a [Capybara cheat sheet](https://thoughtbot.com/upcase/test-driven-rails-resources/capybara.pdf) and complete the Capybara workout.
+- [ ] Explain to your pair partner what jobs `capybara` and `selenium-webdriver` do.
+
+# 17. Starting Battle
+
+- [ ] Start a new project directory (you could call it `Battle`)
+- [ ] Add dependencies for `rspec` and `sinatra` using a Gemfile, and install using `bundle`.
+- [ ] Add an `app.rb` file at the root.
+- [ ] Set up a Sinatra application called `Battle` inside `app.rb` using Sinatra's Modular Style.
+- [ ] Add a `config.ru` file.  Check you can use it to run your app.
+- [ ] Check you can visit your app's homepage in a web browser and see `Hello Battle!`.
+- [ ] Use the `rspec` `init` command to initialise an RSpec skeleton directory and file structure.
+- [ ] Check you can run `rspec` and see `0 examples, 0 failures`.
 
 
+# 18. Setting up test infrastructure
+
+- [ ] Add a dependency for `capybara` to your Gemfile, and install using `bundle`.
+- [ ] In your `spec/spec_helper.rb` file
+  - [ ] Set your `RACK_ENV` to `test`.
+  - [ ] Require your Sinatra app file, `capybara`, `capybara/rspec` and `rspec`.
+  - [ ] Tell Capybara about your app class using `Capybara.app`.
+- [ ] In `spec/features`, write a feature test that checks that the homepage says `Testing infrastructure working!`.
+- [ ] Run `rspec` and check that your feature test fails with `1 example, 1 failure`.
+- [ ] Update your app so that the homepage displays `Testing infrastructure working!`.
+- [ ] Run `rspec` and check that your feature test passes.
+
+# 19. Entering the players
