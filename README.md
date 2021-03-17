@@ -1,8 +1,8 @@
-# battles-flora-jack
+# Battle Challenge
 Week 3 Afternoon challenge - Monday
 
-On Monday - got the end of challenge 13 Using Forms
-Tuesday - jack and emma pairing
+Monday - paired with Jack McCarthy @jackmcc08
+Tuesday - paired with Max Strivens @mstrivens
 
 # 1. The Web: An Introduction
 
