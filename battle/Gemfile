@@ -5,6 +5,6 @@ gem 'rspec'
 gem 'capybara'
 gem 'selenium-webdriver'
 gem 'webrick'
-gem 'shotgun'
+gem 'shotgun', '~> 0.9.2'
 
 ruby "2.7.2"

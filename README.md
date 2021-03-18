@@ -230,6 +230,7 @@ To complete this challenge, you will need to:
 - [x] Remove the `erb :play` expression from the `post '/names'` route, and replace it with a `redirect` to the `'/play'` route
 - [x] Ensure your `enter_names_spec` feature test still passes.
 
+SHOTGUN H
 
 # 21. Viewing Hit Points
 
@@ -249,4 +250,57 @@ I want to see Player 2's Hit Points
         and would that still be a POST?
 
 
-# 22. 
+# 22. Introducing Test Helpers
+
+
+- [x] Make a new file, `spec/features/web_helpers.rb`
+- [x] `require` this file inside your `spec_helper.rb`
+- [x] Define a method inside this file, `sign_in_and_play`
+        - regular def end methods
+- [x] Extract code from your two feature tests that: (**the code is the capybara style just copied and pasted)
+  - visits the homepage,
+  - fills in the fields, and
+  - clicks submit
+- [x] Place this extracted code inside `sign_in_and_play`
+- [x] Replace these lengthy lines in your feature tests with a call to `sign_in_and_play`.
+
+# 23. Attacking Player 2
+
+Consider the third User Story:
+
+```
+As Player 1,
+So I can win a game of Battle,
+I want to attack Player 2, and I want to get a confirmation
+```
+
+- [x] Write a feature test for the User Story above
+- [x] Pass this test with minimal implementation.
+        - form to go to a new page 
+        - wondering about form directing you back to the same page but with new content
+
+# 24. Extracting Logic to the Model
+
+- [x] Create a new spec file for a `Player` class, `spec/player_spec.rb`
+- [x] Give `Player` a tested method that returns its name
+- [x] `require` the `Player` class in your controller file, `app.rb`
+- [x] Instead of storing player names as strings in the `session`, store them as attributes of instances of the `Player` class in global variables (declared using `$`)
+- [x] Commit to memory the fact that using a global variable will ruin any tech tests you do, and promise to your pair partner that you never will
+- [x] Update your instance variables to reference the `Player` instances rather than the `session` keys
+- [x] Ensure all your tests still pass.
+
+THIS DOESN'T WORK IN SHOTGUN!!!!!!!!!
+
+# 25. Implementing Hit Points
+
+Consider user story 4:
+
+```
+As Player 1,
+So I can start to win a game of Battle,
+I want my attack to reduce Player 2's HP by 10
+```
+
+- [x] Write a feature test for the User Story above
+- [x] Pass this test with minimal implementation.
+
