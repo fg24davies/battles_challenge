@@ -166,6 +166,7 @@ To complete this challenge, you will need to:
 # 15. Chrome DevTools
 
 - [x] Open the Chrome DevTools within your browser
+        - use Inspector
 - [x] Switch to the Network pane of the DevTools
 - [x] Interact with your application, explaining to your pair partner what is happening in the DevTools when you do so
 - [x] Locate the method for each request
@@ -173,39 +174,72 @@ To complete this challenge, you will need to:
 
 # 16. Capybara
 
-- [ ] Make sure you have installed Firefox browser on your machine (you can use `brew cask install firefox` if you haven't).
-- [ ] List `capybara` and `selenium-webdriver` in a Gemfile.
-- [ ] make sure bundle install works - you may need to manually install Xcode if you haven't already.
-- [ ] install Firefox GeckoDriver, `brew install geckodriver`. If Firefox does not work for you after installing GeckoDriver, it is also possible to use [gem 'chromedriver-helper'](https://github.com/flavorjones/chromedriver-helper).
-- [ ] Open up *PRY* and require both `capybara/dsl` and `selenium-webdriver`.
-- [ ] Within the REPL, `$ include Capybara::DSL`.
-- [ ] [Set Capybara's default driver](https://github.com/jnicklas/capybara#selecting-the-driver) to be selenium.
-- [ ] Use Capybara's `visit` command to take the automated browser to [http://capybaraworkout.herokuapp.com/](http://capybaraworkout.herokuapp.com/), and use the `click_link` command to click 'Start Workout!'
-- [ ] Refer to a [Capybara cheat sheet](https://thoughtbot.com/upcase/test-driven-rails-resources/capybara.pdf) and complete the Capybara workout.
-- [ ] Explain to your pair partner what jobs `capybara` and `selenium-webdriver` do.
+- [x] Make sure you have installed Firefox browser on your machine (you can use `brew cask install firefox` if you haven't).
+- [x] List `capybara` and `selenium-webdriver` in a Gemfile.
+- [x] make sure bundle install works - you may need to manually install Xcode if you haven't already.
+- [x] install Firefox GeckoDriver, `brew install geckodriver`. If Firefox does not work for you after installing GeckoDriver, it is also possible to use [gem 'chromedriver-helper'](https://github.com/flavorjones/chromedriver-helper).
+- [x] Open up *PRY* and require both `capybara/dsl` and `selenium-webdriver`.
+- [x] Within the REPL, `$ include Capybara::DSL`.
+- [x] [Set Capybara's default driver](https://github.com/jnicklas/capybara#selecting-the-driver) to be selenium.
+- [x] Use Capybara's `visit` command to take the automated browser to [http://capybaraworkout.herokuapp.com/](http://capybaraworkout.herokuapp.com/), and use the `click_link` command to click 'Start Workout!'
+- [x] Refer to a [Capybara cheat sheet](https://thoughtbot.com/upcase/test-driven-rails-resources/capybara.pdf) and complete the Capybara workout.
+- [x] Explain to your pair partner what jobs `capybara` and `selenium-webdriver` do.
 
 # 17. Starting Battle
 
-- [ ] Start a new project directory (you could call it `Battle`)
-- [ ] Add dependencies for `rspec` and `sinatra` using a Gemfile, and install using `bundle`.
-- [ ] Add an `app.rb` file at the root.
-- [ ] Set up a Sinatra application called `Battle` inside `app.rb` using Sinatra's Modular Style.
-- [ ] Add a `config.ru` file.  Check you can use it to run your app.
-- [ ] Check you can visit your app's homepage in a web browser and see `Hello Battle!`.
-- [ ] Use the `rspec` `init` command to initialise an RSpec skeleton directory and file structure.
-- [ ] Check you can run `rspec` and see `0 examples, 0 failures`.
+- [x] Start a new project directory (you could call it `Battle`)
+- [x] Add dependencies for `rspec` and `sinatra` using a Gemfile, and install using `bundle`.
+- [x] Add an `app.rb` file at the root.
+- [x] Set up a Sinatra application called `Battle` inside `app.rb` using Sinatra's Modular Style.
+- [x] Add a `config.ru` file.  Check you can use it to run your app.
+- [x] Check you can visit your app's homepage in a web browser and see `Hello Battle!`.
+- [x] Use the `rspec` `init` command to initialise an RSpec skeleton directory and file structure.
+- [x] Check you can run `rspec` and see `0 examples, 0 failures`.
 
 
 # 18. Setting up test infrastructure
 
-- [ ] Add a dependency for `capybara` to your Gemfile, and install using `bundle`.
-- [ ] In your `spec/spec_helper.rb` file
-  - [ ] Set your `RACK_ENV` to `test`.
-  - [ ] Require your Sinatra app file, `capybara`, `capybara/rspec` and `rspec`.
-  - [ ] Tell Capybara about your app class using `Capybara.app`.
-- [ ] In `spec/features`, write a feature test that checks that the homepage says `Testing infrastructure working!`.
-- [ ] Run `rspec` and check that your feature test fails with `1 example, 1 failure`.
-- [ ] Update your app so that the homepage displays `Testing infrastructure working!`.
-- [ ] Run `rspec` and check that your feature test passes.
+- [x] Add a dependency for `capybara` to your Gemfile, and install using `bundle`.
+- [x] In your `spec/spec_helper.rb` file
+  - [x] Set your `RACK_ENV` to `test`.
+  - [x] Require your Sinatra app file, `capybara`, `capybara/rspec` and `rspec`.
+  - [x] Tell Capybara about your app class using `Capybara.app`.
+- [x] In `spec/features`, write a feature test that checks that the homepage says `Testing infrastructure working!`.
+        - features is a directory that will contain files of all feature tests
+        - TESTS IN SPEC FILES HAVE TO BE CALLED _SPEC.RB !!!!
+- [x] Run `rspec` and check that your feature test fails with `1 example, 1 failure`.
+- [x] Update your app so that the homepage displays `Testing infrastructure working!`.
+- [x] Run `rspec` and check that your feature test passes.
 
 # 19. Entering the players
+
+
+- [x] In `spec/features`, add a new Capybara feature test that expects players to fill in their names (in a form), submit that form, and see those names on-screen
+- [x] Create a `get '/'` route that renders a`index.erb` view with a form
+- [x] Point the `index.erb` form action to a `post '/names'` route
+- [x] Create a `post '/names'` route that uses `params` to render a `play.erb` view that displays the names
+        - params key value has to be the same as the form value and has to the same as the test value
+- [x] Pass the feature test you wrote.
+
+
+# 20. POST/ redirect /GET pattern
+- [x] Use `enable` to enable the `session` in Sinatra
+- [x] In the `post '/names'` route, store the player names in the `session`
+- [x] Write a `get '/play` route that renders the `play.erb` view you already wrote
+- [x] In the `get '/play'` route, extract the instance variables required by the view from the `session`
+- [x] Remove the `erb :play` expression from the `post '/names'` route, and replace it with a `redirect` to the `'/play'` route
+- [x] Ensure your `enter_names_spec` feature test still passes.
+
+
+# 21. Viewing Hit Points
+
+Consider the second User Story:
+
+```
+As Player 1,
+So I can see how close I am to winning
+I want to see Player 2's Hit Points
+```
+
+- [ ] Write a feature test for the User Story above
+- [ ] Pass this test with minimal implementation.
