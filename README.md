@@ -241,5 +241,12 @@ So I can see how close I am to winning
 I want to see Player 2's Hit Points
 ```
 
-- [ ] Write a feature test for the User Story above
-- [ ] Pass this test with minimal implementation.
+- [x] Write a feature test for the User Story above
+- [x] Pass this test with minimal implementation.
+        - minimal implementation referred to that you only needed to add some content (e.g. a string in paragraph element) 
+        - I started using buttons that clicked and had pop ups but those won't pass a have_content test
+        - also wondered about buttons that act as links to URLS but without submiting anything- do you need to use a form only with a submit button
+        and would that still be a POST?
+
+
+# 22. 

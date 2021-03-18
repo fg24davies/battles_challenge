@@ -1,9 +1,8 @@
+
 require 'sinatra'
 
-set :session_secret, "here be dragons"
-
 class Battle < Sinatra::Base
-
+  set :session_secret, "here be dragons"
   enable :sessions 
   
   get '/' do
