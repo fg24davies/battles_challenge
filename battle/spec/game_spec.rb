@@ -19,9 +19,14 @@ describe Game do
   end
 
   describe '#attack' do 
-    it 'reduces HP by 10 after an attack' do
+    it 'reduces player 2\'s HP by 10 after an attack' do
       expect(player_2).to receive(:change_hitpoints)
       game.attack(player_2)
+    end
+
+    it 'reduces player 1\'s HP by 10 after an attack' do
+      expect(player_1).to receive(:change_hitpoints)
+      game.attack(player_1)
     end
   end 
   
@@ -29,6 +34,7 @@ describe Game do
     it 'switches the current player' do
       allow(player_2).to receive(:change_hitpoints)
       game.attack(player_2)
+      game.switching_turns
       expect(game.current_player).to eq player_2
     end 
   end 

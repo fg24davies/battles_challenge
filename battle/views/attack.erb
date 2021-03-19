@@ -1,7 +1,17 @@
+<% if @game.current_player == @game.player_1 %>
 <h1>UH OH. <%= @game.player_1.name %> attacked <%= @game.player_2.name %>!</h1>
+<% else%>
+<h1>UH OH. <%= @game.player_2.name %> attacked <%= @game.player_1.name %>!</h1>
+<% end%>
+
+
 <p style="font-family:verdana"> Player 1 = <%= @game.player_1.name %>,
  they have <%= @game.player_1.hitpoints%> hit points </p>
 <p style="font-family:verdana"> Player 2 = <%= @game.player_2.name %>,
  they have <%= @game.player_2.hitpoints%> hit points </p>
 
-<p> It is <%= @game.current_player.name %>'s turn</p>
+<p> It is <%= @game.other_player.name %>'s turn</p>
+
+ <form action="/switch-turns" method="post">
+  <input type="submit" value="Attaaaaaaack!">
+ </form>
