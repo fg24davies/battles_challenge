@@ -1,3 +1,4 @@
+require_relative 'player.rb'
 
 class Player
 
@@ -8,7 +9,7 @@ class Player
     @hitpoints = 50
   end
 
-  def attack
+  def change_hitpoints
     @hitpoints -= 10
   end
 
