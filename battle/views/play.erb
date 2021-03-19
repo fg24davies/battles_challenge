@@ -1,10 +1,10 @@
 <h1 style="font-family:verdana" >A new fight between
-<%= @player_1_name %> and <%= @player_2_name %> is about to start...Get Ready!
+<%= @game.player_1.name %> and <%= @game.player_2.name %> is about to start...Get Ready!
 </h1>
-<p style="font-family:verdana"> Player 1 = <%= @player_1_name %>,
- they have <%= @player_1_hit_points%> hit points </p>
-<p style="font-family:verdana"> Player 2 = <%= @player_2_name %>,
- they have <%= @player_2_hit_points%> hit points </p>
+<p style="font-family:verdana"> Player 1 = <%= @game.player_1.name %>,
+ they have <%= @game.player_1.hitpoints%> hit points </p>
+<p style="font-family:verdana"> Player 2 = <%= @game.player_2.name %>,
+ they have <%= @game.player_2.hitpoints%> hit points </p>
 
  <form action="/attack" method="get">
   <input type="submit" value="Attaaaaaaack!">
