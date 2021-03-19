@@ -12,6 +12,14 @@
 
 <p> It is <%= @game.other_player.name %>'s turn</p>
 
- <form action="/switch-turns" method="post">
-  <input type="submit" value="Attaaaaaaack!">
- </form>
+<% if @game.player_2.hitpoints == 10 && @game.other_player == @game.player_1 %>
+<form action="/win" method="get">
+<input type="submit" value="Attaaaaaaack!">
+</form>
+<% else %>
+<form action="/switch-turns" method="post">
+<input type="submit" value="Attaaaaaaack!">
+</form>
+<% end %>
+
+
