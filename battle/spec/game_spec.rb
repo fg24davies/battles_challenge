@@ -24,5 +24,12 @@ describe Game do
       game.attack(player_2)
     end
   end 
-
+  
+  describe '#switching_turns' do
+    it 'switches the current player' do
+      allow(player_2).to receive(:change_hitpoints)
+      game.attack(player_2)
+      expect(game.current_player).to eq player_2
+    end 
+  end 
 end 

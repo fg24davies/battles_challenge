@@ -304,3 +304,9 @@ I want my attack to reduce Player 2's HP by 10
 - [x] Write a feature test for the User Story above
 - [x] Pass this test with minimal implementation.
 
+# 26. Single Responsibility 
+
+ - [x] Extract the #attack method (and associated tests) into a Game class
+        - the attack method CALLS the change_hitpoints method BECAUSE hitpoints belong to players and attack should belong to a game. 
+ - [x] Refactor your controller so it uses a Game instance to make an attack.
+        - the Game.new takes the params that the User is entering

@@ -2,7 +2,6 @@ require 'sinatra'
 require_relative './lib/player.rb'
 require_relative './lib/game.rb'
 
-
 class Battle < Sinatra::Base
   set :session_secret, "here be dragons"
   # enable :sessions 
@@ -28,4 +27,6 @@ class Battle < Sinatra::Base
     @game.attack(@game.player_2)
     erb :attack
   end 
+
+
 end 
